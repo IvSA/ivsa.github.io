@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css"> -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
+    <link rel="stylesheet" href="css/chart2.9.4.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <input type="checkbox" id="sidebar-toggle">
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <div class="brand"></div>
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li>
+            <a href=""  class="sidebar-active">
+                <span><i class="fas fa-home"></i></span>
+                <span>Главная</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+                <span><i class="fas fa-poll"></i></span>
+                <span>Поступления</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+                <span><i class="fab fa-sellsy"></i></span>
+                <span>Непрофильные активы</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+                <span><i class="fas fa-file-contract"></i></span>
+                <span>Торги</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="main-content">
+
+        <header>
+            <div class="header-section">
+              <!-- <label for="sidebar-toggle" class="ti-menu-alt"></label> -->
+              <label class="menu__btn" for="sidebar-toggle">
+                <span></span>
+              </label>
+              <span class="header-title">Управление корпоративным имуществом ОАО «РЖД»</span>
+            </div>
+            <div class="social-icons"> 
+              <span class="dash-switch-mode">
+                <input type="checkbox" name="" id="switcher-night-mode">
+                <span class="dash-switch-light"><i class="fas fa-sun"></i></span>
+                <span class="dash-switch-night"><i class="fas fa-moon"></i></span>
+              </span>
+             
+              <span><i class="fas fa-cog"></i></span>
+              <span><i class="fas fa-filter"></i></span>
+              <div></div>
+            </div>
+        </header>
+
+        <main>
+            <div class="dash-cards">
+
+              <div class="card-single">
+                <div class="card-body space-between">
+                    <div>
+                        <h5>Общее количество объектов</h5>
+                        <h4>408 126</h4>
+                    </div>
+                    <div class="card-body-icon">
+                      <span><i class="fas fa-building"></i></span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="">Подробнее</a>
+                </div>
+              </div>
+
+              <div class="card-single">
+                  <div class="card-body space-between">
+                      <div>
+                          <h5>Общее количество земельных участков в собственности</h5>
+                          <h4>7 009</h4>
+                      </div>
+                      <div class="card-body-icon">
+                        <span><i class="fas fa-globe-asia"></i></span>
+                      </div>
+                  </div>
+                  <div class="card-footer">
+                      <a href="">Подробнее</a>
+                  </div>
+              </div>
+
+              <div class="card-single">
+                  <div class="card-body space-between">
+                      <div>
+                          <h5>Общее количество земельных участков полосы отвода</h5>
+                          <h4>15 330</h4>
+                      </div>
+                      <div class="card-body-icon">
+                        <span><i class="fas fa-grip-lines"></i></span>
+                      </div>
+                  </div>
+                  <div class="card-footer">
+                      <a href="">Подробнее</a>
+                  </div>
+              </div>
+
+            </div>
+
+            <!-- <h2 class="dash-title">Денежные средства, полученные от вовлечения объектов 
+              недвижимого имущества в гражданско-правовой оборот</h2> -->
+
+            <div class="dash-cards">
+              <div style="display: flex;
+                          flex-direction: column;
+                          flex: 9999;">
+
+
+                <div class="main-graphic card-single" style="flex: 9999;">
+                  <h5 class="card-header">Денежные средства, полученные от вовлечения объектов 
+                    недвижимого имущества в гражданско-правовой оборот</h5>
+                  <div id="graphicWrapper">
+                    <canvas id="mainGraphic"></canvas>
+                  </div>
+                </div>
+
+                <div class="card-single">
+                  <h5 class="card-header">Выполнение плана квартала</h5>
+                  <div class="card-body">
+                    <span class="bar-quarter-current">
+                      <span class="bar-quarter-full">
+                        <span>90%</span>
+                      </span>
+                  </span>
+                  </div>
+                </div>
+
+                <div class="card-single" >
+                  <h5 class="card-header">Выполнение плана года</h5>
+                  <div class="card-body">
+                    <span class="bar-year-current">
+                      <span class="bar-year-full">
+                        <span>50%</span>
+                      </span>
+                  </span>
+                  </div>
+                </div>
+
+
+              </div>
+              <div class="main-npa" style="flex: 1;">
+
+                <div class="card-single-grow">
+                  <div class="card-body space-between">     
+                    <div>
+                        <h5>Количество непрофильных объектов</h5>
+                        <h4>13 000</h4>
+                    </div>
+                    <div class="card-body-icon">
+                      <span><i class="far fa-clipboard"></i></span>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                      <a href="">Подробнее</a>
+                  </div>
+                </div>
+                <div class="card-single-grow">
+                  <h5 class="card-header">Анализ профильности активов</h5>
+                  <div class="card-body-center">
+                      <div class="gauge">
+                        <div class="gauge-body">
+                          <div class="gauge-fill"></div>
+                          <div class="gauge-cover"></div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="card-single">
+                  <h5 class="card-header space-between">
+                    <span>Календарь торгов</span>
+                    <span><i class="fas fa-ellipsis-h"></i></span>
+                  </h5>
+                  <!-- <div class="card-body-center"> -->
+                    <div class="calendar">
+                      <div class="calendar-header">
+                          <span class="month-picker" id="month-picker">February</span>
+                          <div class="year-picker">
+                              <span class="year-change" id="prev-year">
+                                  <pre>&lt;</pre>
+                              </span>
+                              <span id="year">2021</span>
+                              <span class="year-change" id="next-year">
+                                  <pre>&gt;</pre>
+                              </span>
+                          </div>
+                      </div>
+                      <div class="calendar-body">
+                          <div class="calendar-week-day">
+                              <div>Пн</div>
+                              <div>Вт</div>
+                              <div>Ср</div>
+                              <div>Чт</div>
+                              <div>Пт</div>
+                              <div>Сб</div>
+                              <div>Вс</div>
+                          </div>
+                          <div class="calendar-days"></div>
+                      </div>
+                      <div class="month-list"></div>
+                    </div>
+                  <!-- </div> -->
+                </div>
+              </div>
+            </div>
+
+        </main>
+
+    </div>
+    <script>
+
+    </script>
+    <script src="js/calendar.js"></script>
+    <script src="js/chart2.9.4.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

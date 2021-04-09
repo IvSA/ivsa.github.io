@@ -1,0 +1,92 @@
+body.dark,
+.dark .sidebar,
+.dark header,
+.dark main {
+    background: #202634;
+    color: #a9acb3;
+}
+
+.dark .sidebar,
+.dark .card-single, 
+.dark .card-single-grow,
+.dark .card-footer,
+.dark .gauge-cover {
+    background: #293042;
+}
+
+.dark .sidebar {
+    border-right: 1px solid #293042;
+}
+
+.dark .brand{
+    background-image: url(../img/logo-dark.svg);
+}
+
+.dark header {
+    border-bottom: 1px solid #293042;
+}
+
+/*Текст*/
+.dark .card-body h4,
+.dark .card-body-center h5 {
+    color: #fff;
+}
+
+.dark .card-body h5,
+.dark .card-body-center h5,
+.dark .card-header,
+.dark .dash-switch-light {
+    color: inherit;
+}
+
+/*Свитчер,иконки*/
+.dark .social-icons,
+.dark #switcher-night-mode:checked[type="checkbox"] ~ .dash-switch-night {
+    color: #1659c7;
+}
+
+.dark #switcher-night-mode:checked[type="checkbox"] {
+    background: #1659c7;
+}
+
+.dark #switcher-night-mode[type="checkbox"]:before {
+    background: #84aef2;
+}
+
+/*Графики*/
+.dark .gauge {
+    color: #fff;
+}
+
+.dark .gauge-fill {
+    background: #84aef2;
+}
+
+.dark #switcher-night-mode:checked[type="checkbox"] ~ .dash-switch-light {
+    color: #a9acb3;
+}
+
+.dark .gauge-body  {
+    background: #1659c7;
+}
+
+/*Календарь*/
+.dark .calendar-header,
+.dark .calendar,
+.dark .month-list {
+    background: #293042;
+}
+
+/*Бары*/
+.dark .bar-quarter-current,
+.dark .bar-year-current {
+    box-shadow: 0 0 10px #5e94eb; 
+    background: #1659c7;
+    border: none;
+}
+
+.dark .bar-quarter-current span,
+.dark .bar-year-current span{
+    background: #84aef2;
+    color: #293042;
+}
