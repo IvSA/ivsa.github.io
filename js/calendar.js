@@ -49,6 +49,36 @@ function generateCalendar(month, year) {
             }
             if (i - first_day.getDay() + 1 === currDate.getDate() - 5) {
                 day.classList.add('sel-date')
+                day.classList.add('tooltipped')
+                day.setAttribute('data-position', 'top')
+                day.setAttribute('data-tooltip', 
+                `<div>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Полигон</th>
+                            <th>Дата торгов</th>
+                            <th>Наименование объекта</th>
+                        </tr>
+                        </thead>
+                
+                        <tbody>
+                        <tr>
+                            <td>Окт</td>
+                            <td>15.03.2021</td>
+                            <td>Нежилые помещения
+                            №1,31,32 общей площадью
+                            49,9 кв.м . первого этажа в
+                            здании #Пищеблока#</td>
+                        </tr>
+                        <tr>
+                            <td>Окт</td>
+                            <td>15.03.2021</td>
+                            <td>чзу, передаваемая на Торгах</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>`)
             }
         }
         calendar_days.appendChild(day)
@@ -90,6 +120,12 @@ document.querySelector('#next-year').onclick = function() {
     ++curr_year.value
     generateCalendar(curr_month.value, curr_year.value)
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.tooltipped');
+    var instances = M.Tooltip.init(elems);
+  });
+
 
 // let dark_mode_toggle = document.querySelector('.dark-mode-switch')
 

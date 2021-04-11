@@ -1,0 +1,73 @@
+.col .row.no-min {
+    min-height: 74.5px !important;
+}
+
+.row .col {
+    padding-left: 0;
+    margin-bottom: 5px;
+    min-height: 130px !important;
+    min-width: 190px !important;
+    /* padding-right: 0; */
+}
+
+.col .row {
+    margin: 0;
+    margin-bottom: 5px;
+    min-height: 125px !important;
+}
+
+main {
+    height: calc(100vh - 60px);
+}
+
+.row1 {
+    height: calc(20vh - 60px);
+}
+
+.row2 {
+    height: calc(80vh - 60px);
+}
+
+.row2-1 {
+    height: calc((80vh - 60px) * 9 / 12);
+}
+
+.row2-2 {
+    height: calc((80vh - 60px) * 1.5 / 12);
+}
+
+.row2-3 {
+    height: calc((80vh - 60px) * 1.5 / 12);
+}
+
+.row3-1 {
+    height: calc((80vh - 60px) * 2 / 12);
+}
+
+.row3-2 {
+    height: calc((80vh - 60px) * (4 / 12));
+}
+
+.row3-3 {
+    height: calc((80vh - 60px) * (6 / 12));
+}
+
+.row.row3-3 {
+    min-height: 275px !important;
+}
+
+.col {
+    height: inherit;
+}
+
+@media only screen and (max-height: 1010px) {
+
+    .row3-2 {
+        height: calc((80vh - 60px - 125px) * (5 / 12));
+    }
+    
+    .row3-3 {
+        height: calc((80vh - 185px) * (7/12));
+    }
+    
+}

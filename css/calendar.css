@@ -6,6 +6,12 @@
     /* transform: scale(1.25); */
 }
 
+.calendar-week-day,
+.calendar-header,
+.calendar-day-hover {
+    font-size: calc(11px + 4 * (100vw / 1280));
+}
+
 .light .calendar {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -14,10 +20,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: calc(11px + 4 * (100vw / 1280));
     font-weight: 600;
-    color: var(--color-txt);
-    padding: 10px;
+    padding: 0 10px;
 }
 
 .calendar-body {
@@ -25,7 +29,6 @@
 }
 
 .calendar-week-day {
-    height: 50px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr 1rem 1fr 1rem 1fr 1rem 1fr;  
@@ -69,7 +72,10 @@
 }
 
 .calendar-week-day div {
-    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding-left: 15px; */
 }
 
 .calendar-days {
@@ -78,16 +84,16 @@
     -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;  
         grid-template-columns: repeat(7, 1fr);
     grid-gap: 2px;
-    color: var(--color-txt);
 }
 
 .calendar-days div {
-    width: 50px;
-    height: 50px;
+    width: auto;
+    max-width: 50px;
+    max-height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px;
+    padding: 5px 0;
     position: relative;
     cursor: pointer;
     animation: to-top 1s forwards;
@@ -106,7 +112,6 @@
 .calendar-days div span:nth-child(3) {
     width: 2px;
     height: 0;
-    background-color: var(--color-txt);
 }
 
 .calendar-days div:hover span:nth-child(1),
@@ -128,7 +133,6 @@
 .calendar-days div span:nth-child(4) {
     width: 0;
     height: 2px;
-    background-color: var(--color-txt);
 }
 
 .calendar-days div:hover span:nth-child(2),
@@ -191,28 +195,20 @@
     cursor: pointer;
 }
 
-.month-picker:hover {
-    background-color: var(--color-hover);
-}
-
 .year-picker {
     display: flex;
     align-items: center;
 }
 
 .year-change {
-    height: 40px;
-    width: 40px;
+    max-height: 40px;
+    max-width: 40px;
     border-radius: 50%;
     display: grid;
     display: -ms-grid;
     place-items: center;
     margin: 0 10px;
     cursor: pointer;
-}
-
-.year-change:hover {
-    background-color: var(--color-hover);
 }
 
 .month-list {
@@ -252,11 +248,6 @@
     border-radius: 10px;
     text-align: center;
     cursor: pointer;
-    color: var(--color-txt);
-}
-
-.month-list > div > div:hover {
-    background-color: var(--color-hover);
 }
 
 @keyframes to-top {

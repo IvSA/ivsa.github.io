@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="icon" type="image/png" href="img/favicon.ico"/>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
+    <link rel="stylesheet" href="css/chart2.9.4.min.css">
+    <link rel="stylesheet" href="css/chart.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Дашборд ГЦУ</title>
+</head>
+<body>
+    <input type="checkbox" id="sidebar-toggle">
+
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <div class="brand"></div>
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li>
+            <a href="index.html">
+                <span><i class="fas fa-home"></i></span>
+                <span>Главная</span>
+            </a>
+          </li>
+          <li>
+            <a href="chart.html"  class="sidebar-active">
+                <span><i class="fas fa-poll"></i></span>
+                <span>Поступления</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+                <span><i class="fab fa-sellsy"></i></span>
+                <span>Непрофильные активы</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+                <span><i class="fas fa-file-contract"></i></span>
+                <span>Торги</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="settings sidenav" id="slide-out">
+
+        <div class="row">
+          <div class="input-field">
+            <input type="text" class="datepicker">
+            <label>Выбор отчетной даты</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field">
+            <select id="quarter">
+              <option value="1">Квартал 1</option>
+              <option value="2">Квартал 2</option>
+              <option value="3">Квартал 3</option>
+              <option value="4">Квартал 4</option>
+            </select>
+            <label>Выбор квартала</label>
+          </div>
+        </div>
+  
+    </div>
+
+    <div class="main-content">
+
+        <header>
+            <div class="header-section">
+              <!-- <label for="sidebar-toggle" class="ti-menu-alt"></label> -->
+              <label class="menu__btn" for="sidebar-toggle">
+                <span></span>
+              </label>
+              <span class="header-title">Управление корпоративным имуществом ОАО «РЖД»</span>
+            </div>
+
+            <div class="header-section">
+
+              <div class="social-icons"> 
+                <span class="dash-switch-mode">
+                  <input class="reset-checkbox" type="checkbox" name="" id="switcher-night-mode">
+                  <span class="dash-switch-light"><i class="fas fa-sun"></i></span>
+                  <span class="dash-switch-night"><i class="fas fa-moon"></i></span>
+                </span>
+
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="fas fa-cog" id="rotateSetting"></i></a>
+                <a href="#modal-poly" class="modal-trigger"><i class="fas fa-filter"></i></a>
+                <div></div>
+              </div>
+
+            </div>
+
+            <div id="modal-poly" class="modal">
+                <div class="modal-content">
+                    <h4>Выбор ЖД:</h4>
+                    <p>
+                        <label>
+                            <input id="indeterminate-checkbox" type="checkbox" />
+                            <span>Октябрьская жд</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input id="indeterminate-checkbox" type="checkbox" />
+                            <span>Калининградская жд</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input id="indeterminate-checkbox" type="checkbox" />
+                            <span>Московская жд</span>
+                        </label>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">ОК</a>
+                </div>
+            </div>
+
+        </header>
+
+        <main>
+
+            <div class="row row-settings">
+                <a href=""  class="col">
+                    <i class="fas fa-border-all"></i>
+                </a>
+                <a href=""  class="col" id="icon-compress">
+                    <i class="fas fa-compress-arrows-alt"></i>
+                </a>
+                <a onclick="document.getElementById('chartWrapper').requestFullscreen()" class="col" id="icon-expand">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                </a>
+            </div>
+
+            <div class="row row-chart">
+
+                <div class="col s1">
+                    <div class="row">
+                        <div class="chip" style="background-color: #727cf5;">
+                            Окт
+                            <i class="close fas fa-times" id="chip1"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="chip" style="background-color: #0acf97;">
+                            Клнг
+                            <i class="close fas fa-times" id="chip2"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="chip" style="background-color: #e46837;">
+                            Моск
+                            <i class="close fas fa-times" id="chip3"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="chip" style="background-color: #8b34fd;">
+                            Горьк
+                            <i class="close fas fa-times" id="chip4"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s11" id="chartWrapper">
+                    <canvas id="salesChart"></canvas>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/chart2.9.4.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/chart.js"></script>
+</body>
+</html>

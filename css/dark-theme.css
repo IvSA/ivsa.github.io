@@ -1,9 +1,23 @@
 body.dark,
 .dark .sidebar,
 .dark header,
-.dark main {
-    background: #202634;
+.dark main,
+.dark .datepicker-calendar-container,
+.dark .settings,
+.dark .settings .row,
+.dark .input-field .select-wrapper ul li {
+    background: #202634 !important;
+    color: #a9acb3 !important;
+}
+
+/*Выбор даты*/
+.dark input.select-dropdown.dropdown-trigger{
     color: #a9acb3;
+}
+
+.dark .month-next svg,
+.dark .month-prev svg {
+    fill: #a9acb3;
 }
 
 .dark .sidebar,
@@ -28,7 +42,8 @@ body.dark,
 
 /*Текст*/
 .dark .card-body h4,
-.dark .card-body-center h5 {
+.dark .card-body-center h5,
+.dark .settings .row input {
     color: #fff;
 }
 

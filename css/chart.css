@@ -1,0 +1,27 @@
+main {
+    padding: 0 !important;
+}
+
+.row-settings {
+    height: 3vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.row-chart {
+    width: 98%;
+}
+
+.row-chart .col .row {
+    margin: 5px;
+}
+
+.chip {
+    width: 80px;
+}
+
+#chartWrapper {
+    position: relative;
+    height: calc(97vh - 60px - 20px - 20px);
+}
